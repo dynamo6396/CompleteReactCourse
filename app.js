@@ -1,3 +1,5 @@
+import React from "react";
+import ReactDOM from "react-dom";
 const root = ReactDOM.createRoot(document.getElementById("root")); 
 /*
 Now to create nested element through react
@@ -12,7 +14,7 @@ Now to create nested element through react
 </div>
  */
 
-const parent =React.createElement("div",{id:"parent"},[React.createElement("div",{id:"child"},[React.createElement("h1",{},"Hey I am heading "),React.createElement("h2",{},"Hey I am a h2 tag ")]),React.createElement("div",{id:"child"},[React.createElement("h1",{},"Hey I am heading "),React.createElement("h2",{},"Hey I am a h2 tag ")])]);
+const parent =React.createElement("div",{id:"parent"},[React.createElement("div",{id:"child"},[React.createElement("h1",{},"Hey I am heading "),React.createElement("h2",{},"Hey I am aa h2 tag ")]),React.createElement("div",{id:"child"},[React.createElement("h1",{},"Hey I am heading "),React.createElement("h2",{},"Hey I am a ah2 tag ")])]);
 // this is looking complex but it is made easy by jsx. 
 
 console.log(parent);
