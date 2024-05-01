@@ -1,22 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const root = ReactDOM.createRoot(document.getElementById("root")); 
-/*
-Now to create nested element through react
+import { jsx } from "react/jsx-runtime";
 
-<div class="parent">
-    <div class="child">
-        <h1> This is h1 tag </h1>
-    </div>
-    <div class="child">
-        <h1> This is h1 tag </h1>
-    </div>
-</div>
- */
+// React.createElement => Object => HTMLElement (render)
 
-const parent =React.createElement("div",{id:"parent"},[React.createElement("div",{id:"child"},[React.createElement("h1",{},"Hey I am heading "),React.createElement("h2",{},"Hey I am aa h2 tag ")]),React.createElement("div",{id:"child"},[React.createElement("h1",{},"Hey I am heading "),React.createElement("h2",{},"Hey I am a ah2 tag ")])]);
-// this is looking complex but it is made easy by jsx. 
+const heading = React.createElement("h1",{id:"heading"},"Namaste react");
+console.log(heading);
 
-console.log(parent);
 
-root.render(parent);
+// This is very length,not developer friendly,unreadable and boaring to write html like this in react 
+// So jsx comes in picture.
+
+// jsx - HTML-Like or XML -like syntax
+// JSX (transpied before it reaches the JS) -Parcel-Babel
+// JSX => Bebel transpiled it to React.createElement => ReactElement - JS Object => HTMLElement(render)
+const jsxheading =<h1 id="heading"> Namaste React using JSX 🎈</h1> 
+
+console.log(jsxheading);
+
+const root =ReactDOM.createRoot(document.getElementById("root"));
+root.render(jsxheading);
