@@ -2,21 +2,26 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { jsx } from "react/jsx-runtime";
 
-// React.createElement => Object => HTMLElement (render)
-
-const heading = React.createElement("h1",{id:"heading"},"Namaste react");
-console.log(heading);
-
-
-// This is very length,not developer friendly,unreadable and boaring to write html like this in react 
-// So jsx comes in picture.
-
-// jsx - HTML-Like or XML -like syntax
-// JSX (transpied before it reaches the JS) -Parcel-Babel
-// JSX => Bebel transpiled it to React.createElement => ReactElement - JS Object => HTMLElement(render)
-const jsxheading =<h1 id="heading"> Namaste React using JSX 🎈</h1> 
+//  React Element 
+const jsxheading =(<h1 id="heading"> Namaste React using JSX 🎈</h1> );
+const Title=()=> (
+     <h2> Namaste React </h2>
+);
+{/* This is called component composition  */}
+const f2 =function(){
+    return (<div>Hello world 2 </div>)
+}
+const f1 =()=>{
+    return (<h1>Hello world </h1>)
+}
+const Functionalcomponent =()=>(
+    <div>
+        <Title/>
+        <h1> hello friends</h1>
+    </div>
+);
 
 console.log(jsxheading);
 
 const root =ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxheading);
+root.render(<Functionalcomponent/>);
