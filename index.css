@@ -1,3 +1,56 @@
-#heading {
-    color: blue;
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+}
+
+.items {
+    display: flex;
+    margin: 30px;
+}
+
+.item {
+    padding: 20px;
+    list-style: none;
+
+}
+
+.res-card {
+    width: 300px;
+    height: 470px;
+    background-color: azure;
+    margin: 22px;
+}
+
+.res-card:hover {
+    border: 2px solid burlywood;
+    cursor: pointer;
+}
+
+.res-card img {
+    width: 95%;
+    height: 45%;
+    padding: 7px;
+}
+
+.content {
+    padding: 7px;
+}
+
+.search {
+    padding: 10px;
+}
+
+.res-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 2px solid rebeccapurple; */
+    justify-content: center;
 }
